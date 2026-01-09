@@ -1,10 +1,11 @@
 import { businesses } from '../data/businessData';
+import { resolvePath } from '../utils/paths.js';
 
 export const HistoricBusinesses = (target) => {
     const renderBusinessCard = (business) => `
         <div class="glass-card zoom-card" style="display: flex; flex-direction: column; height: 100%;">
             <div class="image-wrapper" style="position: relative; height: 200px; overflow: hidden; border-radius: 4px;">
-                <img src="${business.image}" alt="${business.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="${resolvePath(business.image)}" alt="${business.name}" style="width: 100%; height: 100%; object-fit: cover;">
                 <div style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
                     Est. ${business.established}
                 </div>

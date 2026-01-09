@@ -1,14 +1,15 @@
 import { churches } from '../data/churchData';
+import { resolvePath } from '../utils/paths.js';
 
 // Placeholder fallback until AI generation quota resets
-const PLACEHOLDER_IMG = '/assets/images/historic_placeholder.png';
+const PLACEHOLDER_IMG = resolvePath('/assets/images/historic_placeholder.png');
 
 export const HistoricChurches = (target) => {
     const renderChurchCard = (church) => `
         <div class="glass-card zoom-card" style="display: flex; flex-direction: column; height: 100%;">
             <div class="image-wrapper" style="position: relative; height: 200px; overflow: hidden; border-radius: 4px;">
                 <img 
-                    src="${church.image}" 
+                    src="${resolvePath(church.image)}" 
                     alt="${church.name}" 
                     style="width: 100%; height: 100%; object-fit: cover;"
                     onerror="this.onerror=null; this.src='${PLACEHOLDER_IMG}';"

@@ -1,7 +1,8 @@
 import { ludlowData } from '../data/ludlowData.js';
+import { resolvePath } from '../utils/paths.js';
 
 export const Ludlow = (target) => {
-    const sectionsHtml = ludlowData.sections.map((section, index) => `
+  const sectionsHtml = ludlowData.sections.map((section, index) => `
     <div class="ludlow-section" style="
       display: flex;
       flex-direction: ${index % 2 === 0 ? 'row' : 'row-reverse'};
@@ -21,14 +22,14 @@ export const Ludlow = (target) => {
             font-style: italic;
             font-size: 1.2rem;
             color: var(--color-dark-teal);
-          ">"${section.quote}"</blockquote>
+            ">"${section.quote}"</blockquote>
         ` : ''}
       </div>
       
       ${section.image ? `
         <div style="flex: 1; min-width: 300px;">
           <div class="glass-card" style="padding: var(--spacing-xs);">
-            <img src="${section.image}" alt="${section.heading}" style="width: 100%; border-radius: 4px;">
+            <img src="${resolvePath(section.image)}" alt="${section.heading}" style="width: 100%; border-radius: 4px;">
             ${section.imageCredit ? `<p style="font-size: 0.8rem; margin-top: 0.5rem; text-align: right; color: var(--text-secondary);">${section.imageCredit}</p>` : ''}
           </div>
         </div>
@@ -36,7 +37,7 @@ export const Ludlow = (target) => {
     </div>
   `).join('');
 
-    const content = `
+  const content = `
     <div style="background-color: var(--color-paper); min-height: 100vh;">
       <div style="
         background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ludlow_tent_colony_site.jpg/1280px-Ludlow_tent_colony_site.jpg');
@@ -73,6 +74,6 @@ export const Ludlow = (target) => {
     </div>
   `;
 
-    target.innerHTML = content;
-    window.scrollTo(0, 0);
+  target.innerHTML = content;
+  window.scrollTo(0, 0);
 };

@@ -1,7 +1,8 @@
 import { pinonData } from '../data/pinonData.js';
+import { resolvePath } from '../utils/paths.js';
 
 export const PinonCanyon = (target) => {
-    const sectionsHtml = pinonData.sections.map((section, index) => `
+  const sectionsHtml = pinonData.sections.map((section, index) => `
     <div class="pinon-section" style="
       display: flex;
       flex-direction: ${index % 2 === 0 ? 'row' : 'row-reverse'};
@@ -21,14 +22,14 @@ export const PinonCanyon = (target) => {
             font-style: italic;
             font-size: 1.2rem;
             color: var(--color-dark-teal);
-          ">"${section.quote}"</blockquote>
+            ">"${section.quote}"</blockquote>
         ` : ''}
       </div>
       
       ${section.image ? `
         <div style="flex: 1; min-width: 300px;">
           <div class="glass-card" style="padding: var(--spacing-xs);">
-            <img src="${section.image}" alt="${section.heading}" style="width: 100%; border-radius: 4px;">
+            <img src="${resolvePath(section.image)}" alt="${section.heading}" style="width: 100%; border-radius: 4px;">
             ${section.imageCredit ? `<p style="font-size: 0.8rem; margin-top: 0.5rem; text-align: right; color: var(--text-secondary);">${section.imageCredit}</p>` : ''}
           </div>
         </div>
@@ -36,11 +37,11 @@ export const PinonCanyon = (target) => {
     </div>
   `).join('');
 
-    const content = `
+  const content = `
     <div style="background-color: var(--color-paper); min-height: 100vh;">
       <!-- Hero Header -->
       <div style="
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/pinon_canyon.png');
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${resolvePath('/assets/images/pinon_canyon.png')}');
         background-size: cover;
         background-position: center;
         height: 60vh;
@@ -77,6 +78,6 @@ export const PinonCanyon = (target) => {
     </div>
   `;
 
-    target.innerHTML = content;
-    window.scrollTo(0, 0);
+  target.innerHTML = content;
+  window.scrollTo(0, 0);
 };

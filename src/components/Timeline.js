@@ -1,4 +1,5 @@
 import { timelineEvents } from '../data/timelineEvents.js';
+import { resolvePath } from '../utils/paths.js';
 
 export const Timeline = (target) => {
   const eventsHtml = timelineEvents.map((event, index) => {
@@ -33,7 +34,7 @@ export const Timeline = (target) => {
           
           ${event.image ? `
             <div style="margin: var(--spacing-sm) 0;">
-              <img src="${event.image}" alt="${event.title}" style="
+              <img src="${resolvePath(event.image)}" alt="${event.title}" style="
                 width: 100%;
                 border-radius: 4px;
                 box-shadow: var(--shadow-sm);

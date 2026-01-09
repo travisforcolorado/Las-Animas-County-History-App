@@ -1,4 +1,5 @@
 import { stories } from '../data/stories.js';
+import { resolvePath } from '../utils/paths.js';
 
 export const Stories = (target) => {
   const storiesHtml = stories.map(story => `
@@ -11,7 +12,7 @@ export const Stories = (target) => {
     " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
       <div style="
         height: 200px;
-        background-image: url('${story.image}');
+        background-image: url('${resolvePath(story.image)}');
         background-size: cover;
         background-position: center;
         border-radius: 8px;

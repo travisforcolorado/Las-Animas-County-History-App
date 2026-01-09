@@ -1,7 +1,9 @@
-export const Home = (target) => {
-    const heroImage = '/assets/images/hero.png';
+import { resolvePath } from '../utils/paths.js';
 
-    const content = `
+export const Home = (target) => {
+  const heroImage = resolvePath('/assets/images/hero.png');
+
+  const content = `
     <!-- Hero Section -->
     <section class="hero" style="
       position: relative;
@@ -76,5 +78,5 @@ export const Home = (target) => {
     </section>
   `;
 
-    target.innerHTML = content;
+  target.innerHTML = content;
 };

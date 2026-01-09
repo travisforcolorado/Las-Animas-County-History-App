@@ -1,15 +1,16 @@
 import { stories } from '../data/stories.js';
+import { resolvePath } from '../utils/paths.js';
 
 export const GenericStory = (target, storyId) => {
-    const story = stories.find(s => s.id === storyId);
+  const story = stories.find(s => s.id === storyId);
 
-    // Handle case where story isn't found
-    if (!story) {
-        target.innerHTML = `<div class="container" style="text-align:center; padding-top: 100px;"><h2>Story Not Found</h2><button class="btn" onclick="window.history.back()">Go Back</button></div>`;
-        return;
-    }
+  // Handle case where story isn't found
+  if (!story) {
+    target.innerHTML = `<div class="container" style="text-align:center; padding-top: 100px;"><h2>Story Not Found</h2><button class="btn" onclick="window.history.back()">Go Back</button></div>`;
+    return;
+  }
 
-    const content = `
+  const content = `
     <section class="container" style="padding-top: var(--spacing-xl); max-width: 800px;">
       <div class="glass-card mb-lg">
         <button class="btn-outline mb-md" onclick="window.location.hash='#stories'">← Back to Stories</button>
@@ -19,7 +20,7 @@ export const GenericStory = (target, storyId) => {
 
         ${story.image ? `
         <div class="mb-lg" style="text-align: center;">
-             <img src="${story.image}" alt="${story.title}" style="max-width: 100%; border-radius: 4px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+             <img src="${resolvePath(story.image)}" alt="${story.title}" style="max-width: 100%; border-radius: 4px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
              ${story.imageCredit ? `<p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-secondary); font-style: italic;">${story.imageCredit}</p>` : ''}
         </div>
         ` : ''}
@@ -32,7 +33,7 @@ export const GenericStory = (target, storyId) => {
     </section>
   `;
 
-    target.innerHTML = content;
-    // Scroll to top
-    window.scrollTo(0, 0);
+  target.innerHTML = content;
+  // Scroll to top
+  window.scrollTo(0, 0);
 };
