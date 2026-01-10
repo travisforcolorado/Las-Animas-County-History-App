@@ -37,7 +37,15 @@ export const Stories = (target) => {
       <p style="font-size: 0.95rem;">${story.excerpt}</p>
       <div style="margin-top: auto; padding-top: var(--spacing-sm);">
         ${story.link ? `
-          <button onclick="window.location.hash='${story.link}'" class="btn" style="width: 100%; font-size: 0.9rem; padding: 0.5rem;">Read Full Story</button>
+          <a href="${story.link}" class="btn" style="
+            display: block;
+            width: 100%; 
+            font-size: 0.9rem; 
+            padding: 0.5rem; 
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+          ">Read Full Story</a>
         ` : `
           <button class="btn-outline" style="width: 100%; font-size: 0.9rem; padding: 0.5rem;">Read More</button>
         `}

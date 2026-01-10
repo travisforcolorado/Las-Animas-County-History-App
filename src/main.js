@@ -7,10 +7,6 @@ import { Stories } from './components/Stories';
 import { Timeline } from './components/Timeline';
 import { HistoricBusinesses } from './components/HistoricBusinesses';
 import { HistoricChurches } from './components/HistoricChurches';
-import { Ludlow } from './components/Ludlow';
-import { PinonCanyon } from './components/PinonCanyon';
-import { RanchingHeritage } from './components/RanchingHeritage';
-import { SimpsonsRest } from './components/SimpsonsRest';
 import { GenericStory } from './components/GenericStory';
 
 const app = document.querySelector('#app');
@@ -38,51 +34,31 @@ const router = () => {
   // Clear previous content (optional, innerHTML overwrite handles it)
   contentDiv.innerHTML = '';
 
-  switch (hash) {
-    case '#':
-    case '#home':
+  if (hash === '' || hash === '#' || hash === '#home') {
+    Home(contentDiv);
+  } else if (hash === '#about') {
+    About(contentDiv);
+  } else if (hash === '#stories') {
+    Stories(contentDiv);
+  } else if (hash === '#timeline') {
+    Timeline(contentDiv);
+  } else if (hash === '#businesses') {
+    HistoricBusinesses(contentDiv);
+  } else if (hash === '#churches') {
+    HistoricChurches(contentDiv);
+  } else if (hash.includes('story/')) {
+    // Extract ID regardless of leading # or other prefixes
+    const parts = hash.split('story/');
+    if (parts.length > 1) {
+      const storyId = parts[1];
+      console.log('Router: Navigating to story:', storyId);
+      GenericStory(contentDiv, storyId);
+    } else {
+      console.error('Router: Invalid story hash:', hash);
       Home(contentDiv);
-      break;
-    case '#about':
-      About(contentDiv);
-      break;
-    case '#stories':
-      Stories(contentDiv);
-      break;
-    case '#timeline':
-      Timeline(contentDiv);
-      break;
-    case '#businesses':
-      // Group History sections? Or just redirect?
-      // User wanted "SECTION" for churches. We can render both or use separate route.
-      // Let's render Business grid.
-      HistoricBusinesses(contentDiv);
-      break;
-    case '#churches':
-      HistoricChurches(contentDiv);
-      break;
-
-    // Story Sub-routes
-    case '#ludlow':
-      Ludlow(contentDiv);
-      break;
-    case '#pinon-canyon':
-      PinonCanyon(contentDiv);
-      break;
-    case '#ranching':
-      RanchingHeritage(contentDiv);
-      break;
-    case '#simpsons-rest':
-      SimpsonsRest(contentDiv);
-      break;
-
-    default:
-      if (hash.startsWith('#story/')) {
-        const storyId = hash.replace('#story/', '');
-        GenericStory(contentDiv, storyId);
-      } else {
-        Home(contentDiv);
-      }
+    }
+  } else {
+    Home(contentDiv);
   }
 };
 

@@ -78,7 +78,7 @@ export const businesses = [
         location: '400 E Main St',
         original_location: 'First Christian Church',
         type: 'Restaurant',
-        image: '/assets/images/historic_placeholder.png',
+        image: '/assets/images/rinos_italian.png',
         description: 'Housed in the stone structure of the original First Christian Church, serving authentic Italian cuisine.',
         history: 'The massive stone building that houses Rino\'s was originally constructed as the First Christian Church of Trinidad around 1890. The congregation worshipped here until 1922, when they moved to a new location. The building later served as a warehouse before finding its culinary calling. The Brehmer and Rino families utilized the church\'s sanctuary acoustics to introduce the famous "Singing Waiters" tradition, celebrating the region\'s deep Italian heritage.',
         today: 'A unique dining destination where the architecture of faith meets the tradition of family food.'
@@ -90,7 +90,7 @@ export const businesses = [
         location: '150 E Main St',
         original_location: 'Jamieson Dry Goods Store',
         type: 'Museum / Historic Building',
-        image: '/assets/images/historic_placeholder.png',
+        image: '/assets/images/ar_mitchell_museum.png',
         description: 'Located in the 1906 Jamieson Building, featuring original tin ceilings and a rare horseshoe mezzanine.',
         history: 'The museum occupies the Jamieson Building, constructed in 1906 by the Jamieson Dry Goods Company. Designed by architect John Conkie, it was a premier department store of the era. The interior is remarkably preserved, featuring stamped tin ceilings and a distinctive horseshoe-shaped mezzanine gallery. It now houses the works of Arthur Roy Mitchell, the "Cowboy Artist" and pulp illustrator who was instrumental in preserving much of Trinidad\'s history.',
         today: 'Open to the public, preserving the legacy of Western art within a pristine turn-of-the-century commercial space.'
@@ -102,7 +102,7 @@ export const businesses = [
         location: '312 E Main St',
         original_location: 'Home of Don Felipe Baca',
         type: 'Museum Complex',
-        image: '/assets/images/historic_placeholder.png',
+        image: '/assets/images/trinidad_history_museum.png',
         description: 'A campus anchoring the city\'s history, featuring the Adobe Baca House (1870) and the Bloom Mansion (1882).',
         history: 'This complex is the heart of Trinidad\'s history. It features the 1870 home of Don Felipe Baca, the town\'s founder, a classic two-story adobe structure built in the New Mexican territorial style. Just yards away sits the 1882 Bloom Mansion, a Second Empire Victorian built by cattleman Frank Bloom. The juxtaposition of these two homes perfectly illustrates the convergence of Hispanic and Anglo cultures that built the city.',
         today: 'Operated by History Colorado, ensuring the preservation of these National Historic Landmarks.'
@@ -114,7 +114,7 @@ export const businesses = [
         location: '410 Benedicta Ave',
         original_location: 'Founded by Sisters of Charity of Cincinnati',
         type: 'Hospital',
-        image: '/assets/images/historic_placeholder.png',
+        image: '/assets/images/mt_san_rafael_hospital.png',
         description: 'Founded to care for miners and railroaders, this institution has served the community for over 135 years.',
         history: 'The Sisters of Charity of Cincinnati arrived in Trinidad in 1889 to establish a hospital, primarily to treat the frequent and horrific injuries sustained by coal miners and railroad workers. The original hospital was a beacon of care on the frontier. The sisters managed the facility through smallpox epidemics, the Spanish Flu of 1918, and the violence of the coal strikes. The current modern facility continues the mission started by those pioneer nuns.',
         today: 'Remains the primary regional medical center, a direct legacy of the Sisters\' frontier mission.'
@@ -126,7 +126,7 @@ export const businesses = [
         location: '1415 N Linden Ave',
         original_location: 'Same location',
         type: 'Recreation',
-        image: '/assets/images/historic_placeholder.png',
+        image: '/assets/images/trinidad_golf_course.png',
         description: 'A historic 9-hole course dating to 1915, with verified design influence from legendary architect Donald Ross.',
         history: 'Opened in 1915, this municipal course is a historic gem. It is one of the oldest courses in Colorado. Long-standing rumors of its design pedigree were confirmed when it was listed among the courses designed or inspired by the legendary Donald Ross, the architect of Pinehurst No. 2. The course layout utilizes the rugged, hilly terrain typical of Ross\'s philosophy, providing a challenging round with spectacular views of the Sangre de Cristo Mountains.',
         today: 'Open to the public, offering a chance to play on a course with century-old architectural pedigree.'
@@ -138,7 +138,7 @@ export const businesses = [
         location: '418 E Main St',
         original_location: 'Monteleone Family Tradition',
         type: 'Restaurant',
-        image: '/assets/images/historic_placeholder.png',
+        image: '/assets/images/nana_and_nanos.png',
         description: 'Continuing the Monteleone family culinary legacy that dates back to 1949 and immigrant roots.',
         history: 'While the current restaurant name was established more recently, the Monteleone family has been a cornerstone of Trinidad\'s food culture since 1949. The recipes for their sauces and pastas trace back to Sicily, brought to Colorado by ancestors like Minnie DeCristino. The family\'s involvement in local delis and restaurants represents the enduring Italian influence in Trinidad, where Sunday dinner was extensive and homemade was the only way.',
         today: 'Operated by 3rd and 4th generation family members, serving the authentic tastes of historic Trinidad.'
