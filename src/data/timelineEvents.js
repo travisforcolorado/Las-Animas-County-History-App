@@ -47,7 +47,7 @@ export const timelineEvents = [
         description: 'On April 20, the National Guard attacks a tent colony of striking miners. The resulting massacre becomes a watershed moment in American labor history.',
         image: '/assets/images/ludlow_tents.png',
         imageCredit: 'Public Domain',
-        link: '#ludlow',
+        link: '#story/ludlow',
         linkText: 'Read about Ludlow'
     },
     {
@@ -79,7 +79,7 @@ export const timelineEvents = [
         icon: 'fire',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Ludlow_Massacre_-_The_Masses_cover_%28June_1914%29.jpg/440px-Ludlow_Massacre_-_The_Masses_cover_%28June_1914%29.jpg',
         imageCredit: 'The Masses / John Sloan (Public Domain)',
-        link: '#ludlow',
+        link: '#story/ludlow',
         linkText: 'Read Full Story'
     },
     {
@@ -125,7 +125,7 @@ export const timelineEvents = [
         title: 'Pinon Canyon Maneuver Site',
         description: 'The U.S. Army utilizes eminent domain to acquire 235,000 acres for a maneuver training site, displacing ranching families and sparking decades of tension.',
         icon: 'jet-fighter',
-        link: '#pinon-canyon',
+        link: '#story/pinon-canyon',
         linkText: 'Read Full Story'
     },
     {
@@ -133,7 +133,7 @@ export const timelineEvents = [
         title: 'Victory: Expansion Cancelled',
         description: 'After a fierce battle led by the "Not 1 More Acre" coalition of ranchers and locals, the Army officially cancels plans to expand the Pinon Canyon site.',
         icon: 'gavel',
-        link: '#pinon-canyon',
+        link: '#story/pinon-canyon',
         linkText: 'Read Full Story'
     },
     {

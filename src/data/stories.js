@@ -8,6 +8,40 @@ import { campTrinidadData } from './campTrinidadData.js';
 import { prohibitionData } from './prohibitionData.js';
 import { santaFeTrailData } from './santaFeTrailData.js';
 import { walsenburgData } from './walsenburgData.js';
+import { businesses } from './businessData.js';
+
+const businessById = (id) => businesses.find((business) => business.id === id) ?? {};
+
+const chronicleNews = businessById('chronicle-news');
+const firstNationalBank = businessById('first-national-bank');
+const blackJacks = businessById('black-jacks');
+const wellHotel = businessById('well-hotel');
+const tarabinoInn = businessById('tarabino-inn');
+const hadads = businessById('hadads');
+const rinos = businessById('rinos');
+const nanaAndNanos = businessById('nana-and-nanos');
+const arMitchell = businessById('ar-mitchell');
+const bacaHouse = businessById('baca-house');
+const mtSanRafael = businessById('mt-san-rafael');
+const trinidadGolf = businessById('trinidad-golf');
+
+const historicBusinessSections = [
+    {
+        heading: 'Chronicling the Frontier and Banking the Trail',
+        content: `${chronicleNews.history} ${firstNationalBank.history} Main Street needed both ink and capital; the Chronicle News recorded every strike, parade, and court case while First National bank kept the cattlemen\'s payrolls flowing through its fortress-like vaults.`,
+        image: chronicleNews.image
+    },
+    {
+        heading: 'Hotels, Saloons and Stories You Could Tell',
+        content: `${blackJacks.history} ${wellHotel.history} ${tarabinoInn.history} Rumors of Black Jack Ketchum, dining under the tin ceiling of Black Jack\'s Saloon, rubbed shoulders with the Bloom Block refinement where The Well Hotel now stands, while the Tarabino Inn hosted the Italian merchants who kept Main Street humming.`,
+        image: wellHotel.image
+    },
+    {
+        heading: 'Family Tables & Cultural Anchors',
+        content: `${hadads.history} ${rinos.history} ${nanaAndNanos.history} ${arMitchell.history} ${bacaHouse.history} ${mtSanRafael.history} ${trinidadGolf.history} Everyday people found refuge at Hadad\'s, Rino\'s, and Nana & Nano\'s, then wandered over to galleries honoring A.R. Mitchell, stepped onto the Baca House lawns, received care at Mt. San Rafael, or played the historic Trinidad Golf course—each a thread of Main Street living.`,
+        image: arMitchell.image
+    }
+];
 
 export const stories = [
     {
@@ -112,9 +146,12 @@ export const stories = [
     {
         id: 'historic-businesses',
         title: "Historic Businesses of Trinidad",
+        subtitle: "Main Street anchors and frontier icons",
+        intro: "From newspapers to saloons, Trinidad's entrepreneurs created a durable economy and a storied Main Street district that survived boom, bust, and coalfield wars.",
         excerpt: "Explore the enduring legacy of the businesses that built Trinidad. From 1870s newspapers to the saloons of the Wild West, discover the 12 establishments that have stood the test of time.",
         image: "/assets/images/historic_downtown_trinidad.png",
-        link: "#businesses",
+        link: "#story/historic-businesses",
+        sections: historicBusinessSections
     },
     {
         id: 'santa-fe-trail',
