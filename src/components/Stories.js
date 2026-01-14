@@ -2,8 +2,17 @@ import { stories } from '../data/stories.js';
 import { resolvePath } from '../utils/paths.js';
 
 export const Stories = (target) => {
-  const storiesHtml = stories.map(story => `
-    <div class="glass-card" style="
+  const storiesHtml = stories.map(story => {
+    const storyHash = story.link ? story.link.replace(/^#/, '') : '';
+    const cardInteraction = story.link ? `
+      onclick="window.location.hash='${storyHash}'"
+      onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.hash='${storyHash}'; }"
+      role="button"
+      tabindex="0"
+    ` : '';
+
+    return `
+    <div class="glass-card" ${cardInteraction} style="
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -51,7 +60,7 @@ export const Stories = (target) => {
         `}
       </div>
     </div>
-  `).join('');
+  `}).join('');
 
   const content = `
     <section class="container" style="padding-top: var(--spacing-xl);">
