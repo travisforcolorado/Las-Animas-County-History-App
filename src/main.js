@@ -46,15 +46,13 @@ const router = () => {
     HistoricBusinesses(contentDiv);
   } else if (hash === '#churches') {
     HistoricChurches(contentDiv);
-  } else if (hash.includes('story/')) {
-    // Extract ID regardless of leading # or other prefixes
-    const parts = hash.split('story/');
-    if (parts.length > 1) {
-      const storyId = parts[1];
+  } else if (hash.startsWith('#story/')) {
+    const storyId = hash.replace('#story/', '');
+    if (storyId) {
       console.log('Router: Navigating to story:', storyId);
       GenericStory(contentDiv, storyId);
     } else {
-      console.error('Router: Invalid story hash:', hash);
+      console.error('Router: Empty story ID');
       Home(contentDiv);
     }
   } else {

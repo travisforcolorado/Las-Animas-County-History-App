@@ -112,7 +112,7 @@ export const stories = [
     {
         id: 'historic-businesses',
         title: "Historic Businesses of Trinidad",
-        description: "Explore the enduring legacy of the businesses that built Trinidad. From 1870s newspapers to the saloons of the Wild West, discover the 12 establishments that have stood the test of time.",
+        excerpt: "Explore the enduring legacy of the businesses that built Trinidad. From 1870s newspapers to the saloons of the Wild West, discover the 12 establishments that have stood the test of time.",
         image: "/assets/images/historic_downtown_trinidad.png",
         link: "#businesses",
     },
