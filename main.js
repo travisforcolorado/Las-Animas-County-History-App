@@ -15,33 +15,39 @@ document.querySelector('#app').innerHTML = `
 import { Timeline } from './src/components/Timeline.js';
 import { Stories } from './src/components/Stories.js';
 import { About } from './src/components/About.js';
-import { Ludlow } from './src/components/Ludlow.js';
-import { SimpsonsRest } from './src/components/SimpsonsRest.js';
-import { RanchingHeritage } from './src/components/RanchingHeritage.js';
-import { PinonCanyon } from './src/components/PinonCanyon.js';
 import { HistoricBusinesses } from './src/components/HistoricBusinesses.js';
-
-const routes = {
-  '': Home,
-  '#home': Home,
-  '#timeline': Timeline,
-  '#stories': Stories,
-  '#about': About,
-  '#ludlow': Ludlow,
-  '#simpsons-rest': SimpsonsRest,
-  '#ranching': RanchingHeritage,
-  '#pinon-canyon': PinonCanyon,
-  '#businesses': HistoricBusinesses,
-};
+import { HistoricChurches } from './src/components/HistoricChurches.js';
+import { GenericStory } from './src/components/GenericStory.js';
 
 const router = () => {
   const hash = window.location.hash || '#home';
-  const component = routes[hash] || routes['#home'];
-  // clear content
   const mainContent = document.querySelector('#main-content');
+
   mainContent.innerHTML = '';
-  // render component
-  component(mainContent);
+
+  if (hash === '' || hash === '#' || hash === '#home') {
+    Home(mainContent);
+  } else if (hash === '#timeline') {
+    Timeline(mainContent);
+  } else if (hash === '#stories') {
+    Stories(mainContent);
+  } else if (hash === '#about') {
+    About(mainContent);
+  } else if (hash === '#businesses') {
+    HistoricBusinesses(mainContent);
+  } else if (hash === '#churches') {
+    HistoricChurches(mainContent);
+  } else if (hash.startsWith('#story/')) {
+    const storyId = hash.replace('#story/', '');
+    if (storyId) {
+      GenericStory(mainContent, storyId);
+    } else {
+      Home(mainContent);
+    }
+  } else {
+    Home(mainContent);
+  }
+
   window.scrollTo(0, 0);
 };
 

@@ -37,8 +37,8 @@ export const timelineEvents = [
     },
     {
         year: '1913',
-        title: 'The Spark: Walsenburg',
-        description: 'Tensions rise as miners strike for better conditions. The killing of workers in Walsenburg ignites the coalfield wars.',
+        title: 'Coalfield War Begins',
+        description: 'Striking miners and mine owners clash in the southern coalfields, with Walsenburg and Trinidad emerging as focal points of the labor conflict.',
         image: '/assets/images/walsenburg_spark_1913.png'
     },
     {
@@ -63,9 +63,9 @@ export const timelineEvents = [
         icon: 'landmark' // Using landmark icon effectively
     },
     {
-        year: '1895',
-        title: 'The Spark: Walsenburg Massacre',
-        description: 'In neighboring Huerfano County, the brutal vigilante killing of five Italian miners became an international incident. This tragedy is widely viewed as the "spark that lit the fuse" for the impending Coalfield Wars, uniting the immigrant labor force against injustice.',
+        year: '1914',
+        title: 'Battle of Walsenburg',
+        description: 'Late April fighting in Walsenburg becomes one of the major clashes of the Colorado Coalfield War, reflecting the conflict that swept the southern coalfields.',
         icon: 'fire-flame-curved',
         image: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Miners_Walsenburg_Colorado.jpg',
         imageCredit: 'Public Domain / Wikimedia Commons',
@@ -90,23 +90,23 @@ export const timelineEvents = [
     },
     {
         year: '1930',
-        title: 'Prohibition & The Fallen Agents',
-        description: 'The Prohibition era brings violence to the region. Special Agent Dale F. Kearney is ambushed and killed in Aguilar. Months later, Agent Ray Sutton vanishes while investigating bootleggers between Raton and Trinidad, never to be found.',
+        title: 'Prohibition Enforcement',
+        description: 'Colorado enforces state and federal prohibition with local agents and a state law enforcement department, reflecting a turbulent era of regulation and resistance.',
         icon: 'user-secret',
         image: '/assets/images/prohibition_agents.png',
         imageCredit: 'Historical Recreation / AI Generated',
         link: '#story/prohibition-agents',
-        linkText: 'Read Mystery'
+        linkText: 'Read Story'
     },
     {
         year: '1943',
-        title: 'Camp Trinidad & The Great Escape',
-        description: 'Camp Trinidad houses thousands of German POWs, including Afrika Korps officers. In a daring event, German officers escape with the help of three Japanese-American women from the Amache internment camp.',
+        title: 'Camp Trinidad POWs',
+        description: 'Camp Trinidad operates as a World War II POW camp in Las Animas County, part of a nationwide network of German prisoner facilities.',
         icon: 'person-drowning',
         image: '/assets/images/simpsons_rest_postcard.png',
         imageCredit: 'Vintage Postcard Style / AI Generated',
         link: '#story/camp-trinidad',
-        linkText: 'Read Escape Story'
+        linkText: 'Read Story'
     },
     {
         year: '1866',
@@ -123,7 +123,7 @@ export const timelineEvents = [
     {
         year: '1983',
         title: 'Pinon Canyon Maneuver Site',
-        description: 'The U.S. Army utilizes eminent domain to acquire 235,000 acres for a maneuver training site, displacing ranching families and sparking decades of tension.',
+        description: 'The U.S. Army acquires land for the Pinon Canyon Maneuver Site, using eminent domain for much of the area and establishing a large training range.',
         icon: 'jet-fighter',
         link: '#story/pinon-canyon',
         linkText: 'Read Full Story'

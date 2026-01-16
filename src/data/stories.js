@@ -8,38 +8,28 @@ import { campTrinidadData } from './campTrinidadData.js';
 import { prohibitionData } from './prohibitionData.js';
 import { santaFeTrailData } from './santaFeTrailData.js';
 import { walsenburgData } from './walsenburgData.js';
-import { businesses } from './businessData.js';
-
-const businessById = (id) => businesses.find((business) => business.id === id) ?? {};
-
-const chronicleNews = businessById('chronicle-news');
-const firstNationalBank = businessById('first-national-bank');
-const blackJacks = businessById('black-jacks');
-const wellHotel = businessById('well-hotel');
-const tarabinoInn = businessById('tarabino-inn');
-const hadads = businessById('hadads');
-const rinos = businessById('rinos');
-const nanaAndNanos = businessById('nana-and-nanos');
-const arMitchell = businessById('ar-mitchell');
-const bacaHouse = businessById('baca-house');
-const mtSanRafael = businessById('mt-san-rafael');
-const trinidadGolf = businessById('trinidad-golf');
 
 const historicBusinessSections = [
     {
-        heading: 'Chronicling the Frontier and Banking the Trail',
-        content: `${chronicleNews.history} ${firstNationalBank.history} Main Street needed both ink and capital; the Chronicle News recorded every strike, parade, and court case while First National bank kept the cattlemen\'s payrolls flowing through its fortress-like vaults.`,
-        image: chronicleNews.image
+        heading: 'Trail Commerce and Early Trade',
+        content: "Trinidad grew along the Santa Fe Trail, a major commercial route opened in 1821 that linked Missouri with Santa Fe.[1][2] The town was founded in 1862 soon after coal was discovered in the region, and its location near Raton Pass made it a natural stop for travelers, traders, and supply wagons.[2] Early businesses served the needs of trail commerce, providing lodging, blacksmithing, and provisions for the steady movement of people and goods.[1][2]",
+        image: "/assets/images/historic_downtown_trinidad.png"
     },
     {
-        heading: 'Hotels, Saloons and Stories You Could Tell',
-        content: `${blackJacks.history} ${wellHotel.history} ${tarabinoInn.history} Rumors of Black Jack Ketchum, dining under the tin ceiling of Black Jack\'s Saloon, rubbed shoulders with the Bloom Block refinement where The Well Hotel now stands, while the Tarabino Inn hosted the Italian merchants who kept Main Street humming.`,
-        image: wellHotel.image
+        heading: 'Railroad Boom and Downtown Growth',
+        content: "The Atchison, Topeka and Santa Fe Railway reached Trinidad in 1878, making it easier to ship goods and accelerating downtown growth.[2] By the early twentieth century, the city was investing in major civic and commercial buildings, including a library, city hall, an opera house, and a hotel in the downtown core.[2] These projects reflected a business district that had matured from a trail outpost into a regional commercial hub tied to coal mining and rail traffic.[2]"
     },
     {
-        heading: 'Family Tables & Cultural Anchors',
-        content: `${hadads.history} ${rinos.history} ${nanaAndNanos.history} ${arMitchell.history} ${bacaHouse.history} ${mtSanRafael.history} ${trinidadGolf.history} Everyday people found refuge at Hadad\'s, Rino\'s, and Nana & Nano\'s, then wandered over to galleries honoring A.R. Mitchell, stepped onto the Baca House lawns, received care at Mt. San Rafael, or played the historic Trinidad Golf course—each a thread of Main Street living.`,
-        image: arMitchell.image
+        heading: 'Newspapers and Civic Life',
+        content: "By 1900, Trinidad supported two English-language newspapers and one Spanish-language paper, evidence of a diverse and active civic economy.[2] The Trinidad Chronicle-News, founded in 1876 and created by a merger in 1898, remains the city's long-running daily newspaper and an anchor of local business life.[3] Newspapers did more than report events; they connected communities, advertised local enterprises, and recorded the public story of southern Colorado.[2][3]"
+    },
+    {
+        heading: 'Reinvention in the Modern Era',
+        content: "Trinidad's business landscape has continued to change. In the 2010s, the city experienced a new boom tied to the marijuana industry, with significant tax revenue generated from sales.[2] This modern shift shows how the downtown economy has repeatedly adapted to new markets, from trail commerce to rail-and-coal to contemporary tourism and retail.[2] The historic business story is therefore less about a single enterprise and more about a tradition of reinvention shaped by geography and opportunity.[2]"
+    },
+    {
+        heading: 'Sources',
+        content: "1. https://en.wikipedia.org/wiki/Santa_Fe_Trail<br>2. https://en.wikipedia.org/wiki/Trinidad,_Colorado<br>3. https://en.wikipedia.org/wiki/Trinidad_Chronicle-News"
     }
 ];
 
@@ -50,7 +40,7 @@ export const stories = [
         subtitle: simpsonData.subtitle,
         intro: simpsonData.intro,
         image: '/assets/images/simpson_hideout.png',
-        excerpt: 'The legendary scout who survived a siege by Ute warriors on the rocky butte that now bears his name. His grave overlooks Trinidad to this day.',
+        excerpt: 'A landmark butte overlooking Trinidad and the burial place of explorer and trader George S. Simpson.',
         imageCredit: 'Historical Illustration / AI Generated',
         link: '#story/george-simpson',
         sections: simpsonData.sections
@@ -61,7 +51,7 @@ export const stories = [
         subtitle: batMastersonData.subtitle,
         intro: batMastersonData.intro,
         image: '/assets/images/bat_masterson.png',
-        excerpt: 'The famous lawman served as Marshal in Trinidad during the 1880s, keeping the peace in a rough frontier town.',
+        excerpt: 'Bat Masterson was appointed city marshal of Trinidad in 1882 during the town\'s railroad and coal boom.',
         imageCredit: 'Public Domain / Wikimedia Commons',
         link: '#story/bat-masterson',
         sections: batMastersonData.sections
@@ -72,7 +62,7 @@ export const stories = [
         subtitle: dropCityData.subtitle,
         intro: dropCityData.intro,
         image: '/assets/images/drop_city.png',
-        excerpt: 'Founded in 1965, Drop City was an artists community that became the first rural hippie commune in the United States.',
+        excerpt: 'Founded in 1960 near Trinidad, Drop City became the first rural hippie commune in the United States.',
         imageCredit: 'Historical Recreation / AI Generated',
         link: '#story/drop-city',
         sections: dropCityData.sections
@@ -83,7 +73,7 @@ export const stories = [
         subtitle: ranchingData.subtitle,
         intro: ranchingData.intro,
         image: '/assets/images/ranching_heritage.png',
-        excerpt: 'From the early Hispano settlers of the Purgatoire Valley to the Anglo cattle kings and immigrant farmers, agriculture is the backbone of Las Animas County.',
+        excerpt: 'Ranching in Las Animas County reflects the broader history of open range, homesteading, and federal grazing policy.',
         imageCredit: 'Historical Collage / AI Generated',
         link: '#story/ranching-heritage',
         sections: ranchingData.sections
@@ -94,7 +84,7 @@ export const stories = [
         subtitle: pinonData.subtitle,
         intro: pinonData.intro,
         image: '/assets/images/pinon_canyon.png',
-        excerpt: 'When the Army proposed a massive expansion of the Pinon Canyon Maneuver Site, the community united under the banner "Not 1 More Acre" and won a historic victory.',
+        excerpt: 'The Pinon Canyon Maneuver Site was created in 1983, and a proposed expansion was cancelled in 2013 after local opposition.',
         imageCredit: 'Vintage Landscape / AI Generated',
         link: '#story/pinon-canyon',
         sections: pinonData.sections
@@ -105,7 +95,7 @@ export const stories = [
         subtitle: walsenburgData.subtitle,
         intro: walsenburgData.intro,
         image: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Miners_Walsenburg_Colorado.jpg',
-        excerpt: 'The "Walsenburg Massacre" in Huerfano County saw the death of Italian miners by vigilantes. This injustice fueled the labor movement that would eventually explode in the Southern Colorado Coalfield Wars.',
+        excerpt: 'Walsenburg was a key location in the 1913-1914 Colorado Coalfield War, including the Battle of Walsenburg.',
         imageCredit: 'Public Domain / Wikimedia Commons',
         link: '#story/walsenburg-massacre',
         sections: walsenburgData.sections
@@ -127,7 +117,7 @@ export const stories = [
         subtitle: campTrinidadData.subtitle,
         intro: campTrinidadData.intro,
         image: '/assets/images/camp_trinidad.png',
-        excerpt: 'In 1943, Camp Trinidad housed German POWs. Three Japanese-American sisters from the nearby Amache internment camp, while working on a local farm, helped two German officers escape in a plot that stunned the nation.',
+        excerpt: 'Camp Trinidad was a World War II POW camp in Las Animas County, linked to the region\'s coal-mining landscape.',
         imageCredit: 'Historical Recreation / AI Generated',
         link: '#story/camp-trinidad',
         sections: campTrinidadData.sections
@@ -138,7 +128,7 @@ export const stories = [
         subtitle: prohibitionData.subtitle,
         intro: prohibitionData.intro,
         image: '/assets/images/prohibition_agents.png',
-        excerpt: 'In 1930, the bootlegging wars claimed the lives of federal agents. Dale Kearney was murdered in Aguilar, and Ray Sutton disappeared without a trace near Raton, NM, while working the Trinidad beat.',
+        excerpt: 'Colorado entered Prohibition in 1916, enforced it through state agents, and voted to repeal in 1932.',
         imageCredit: 'Historical Recreation / AI Generated',
         link: '#story/prohibition-agents',
         sections: prohibitionData.sections
@@ -146,9 +136,9 @@ export const stories = [
     {
         id: 'historic-businesses',
         title: "Historic Businesses of Trinidad",
-        subtitle: "Main Street anchors and frontier icons",
-        intro: "From newspapers to saloons, Trinidad's entrepreneurs created a durable economy and a storied Main Street district that survived boom, bust, and coalfield wars.",
-        excerpt: "Explore the enduring legacy of the businesses that built Trinidad. From 1870s newspapers to the saloons of the Wild West, discover the 12 establishments that have stood the test of time.",
+        subtitle: "Commerce from Trail Era to Modern Revival",
+        intro: "Trinidad's business history grew from Santa Fe Trail commerce, accelerated with railroads and coal, and continues to reinvent itself in the modern era.",
+        excerpt: "A timeline of Trinidad's business life, from trail-era commerce to rail-and-coal growth and modern reinvention.",
         image: "/assets/images/historic_downtown_trinidad.png",
         link: "#story/historic-businesses",
         sections: historicBusinessSections
